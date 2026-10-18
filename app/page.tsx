@@ -89,7 +89,10 @@ export default function GForceApp() {
     try {
       const q = query(collection(db, "employees"), where("isApproved", "==", true));
       const snap = await getDocs(q);
-      const staffs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      
+      // 🔴 เติม : any[] ลงไปตรงบรรทัดนี้ครับ
+      const staffs: any[] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      
       staffs.unshift({ id: "admin-system", icName: "Admin", role: "partner", isApproved: true });
       setPublicStaffList(staffs);
     } catch (error) { console.error(error); }
