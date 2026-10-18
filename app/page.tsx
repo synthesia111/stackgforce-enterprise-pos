@@ -91,7 +91,7 @@ export default function GForceApp() {
       const snap = await getDocs(q);
       
       // 🔴 เติม : any[] ลงไปตรงบรรทัดนี้ครับ
-      const staffs: any[] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      const staffs: any[] = snap.docs.map(d => ({ id: d.id, ...d.data() })); 
       
       staffs.unshift({ id: "admin-system", icName: "Admin", role: "partner", isApproved: true });
       setPublicStaffList(staffs);
