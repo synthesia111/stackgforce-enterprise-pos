@@ -230,7 +230,7 @@ export default function GForceApp() {
 
   // 🔴 ปรับปรุงระบบเพิ่มลงตะกร้า (บังคับใส่เลขกุญแจถ้าระบุเวลา)
   const addToCart = (item: any) => {
-    let keyId: any = null;
+    let keyId: any = null; 
     let duration = 0;
     
     // ตรวจสอบว่ามีคำว่ากี่นาที
